@@ -1,3 +1,8 @@
-import sayHello from './lib/sayHello.js';
+// import 'jquery';
+import toggleSidebar from './lib/collapse.js';
 
-sayHello();
+document.getElementById('toggle-btn').addEventListener('click',toggleSidebar);
+
+
+
+

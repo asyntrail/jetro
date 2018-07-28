@@ -1,10 +1,10 @@
-h1
-    color: blue
-    +bebas
+
 
 .container
-  max-width: 940px
-  margin: 0 auto
+    max-width: 940px
+    margin: 0 auto
+    +r(963)
+        margin: 0 10px
 
 
 .header__wrap
@@ -27,6 +27,9 @@ h1
 
 .header__nav
     margin-left: auto
+    +r(670)
+        display: none
+
 
 .nav
     font-size: 16px
@@ -62,19 +65,35 @@ h1
         +bebas
 
 .content
-    display: flex
+    +rmin(926)
+        display: flex
 
 .main
     width: 65%
+    +r(925)
+        width: 83%
+    +r(600)
+        width: 100%
 
 .aside
     width: 17%
+    padding-left: 25px
+    +r(925)
+        width: 80%
+        margin: 10px auto
+        display: flex
+    +r(680)
+        display: block
+    +r(600)
+        width: 100%
+        padding: 0 10px
 
 .post
     display: flex
     &__media
-        height: 300px
         margin-bottom: 24px
+        +r(462)
+            margin-bottom: 0px
     &__content
         padding: 0px 10px
         width: 74%
@@ -84,17 +103,28 @@ h1
             height: 14px
             margin: 50px 0px
             background: url(../img/particle.png) 0 0
+        +r(925)
+            width: 86%
+        +r(600)
+            width: 100%
     &__description
         display: flex
+        +r(462)
+            display: block
     &__info
         width: 23%
         font-size: 12px
         color: $text-color
         +bebas
+        +r(462)
+            display: flex
+            width: 100%
     &__text
         width: 77%
         font-size: 12px
         line-height: 1.5
+        +r(462)
+            width: 100%
     &__title
         margin: 5px 0px 20px 0px
         a
@@ -122,9 +152,19 @@ h1
         &:hover
             color: $second-color
 
+.date,.tags,.comment
+    +r(462)
+            width: 33.33%
+            text-align: center
+            margin-bottom: 10px
+
 .icon-col
     text-align: right
     width: 25.5%
+    +r(925)
+        width: 21%
+    +r(600)
+        display: none
     &__icon
         height: 75px
         width: 75px
@@ -137,6 +177,20 @@ h1
     height: 300px
     width: 100%
     object-fit: cover
+    +r(600)
+        height: 200px
+
+.thumb-wrap
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 
 .date__title,.tags__title,.comment__title
     display: block
@@ -152,37 +206,51 @@ h1
      &:hover
         color: $second-color
 
-.aside
-    padding-left: 25px
-    &__title
-        color: $active-color
-        display: flex
-        text-transform: uppercase
-        margin-bottom: 23px
-        font-size: 14px
-        +bebas
-        &:after
-            content: ""
-            flex: 1
-            margin-left: 20px
-            background: url(../img/particle.png) 0 0
-    &__about
-        margin-bottom: 37px
+.about,.list,.gallery
+    +r(925)
+        width: 33.33%
+        margin: 0 5px
+    +r(680)
+        width: 100%
+
+
+
+
+
+
+.aside-title
+    color: $active-color
+    display: flex
+    text-transform: uppercase
+    margin-bottom: 23px
+    font-size: 14px
+    +bebas
+    &:after
+        content: ""
+        flex: 1
+        margin-left: 10px
+        background: url(../img/particle.png) 0 0
+
+.about__text
+    margin-bottom: 37px
+    font-size: 12px
+    line-height: 1.2
+
+.list__nav
+    margin-bottom: 30px
+    a
+        color: #000
         font-size: 12px
         line-height: 1.2
-    &__list
-        margin-bottom: 30px
-        a
-            color: #000
-            font-size: 12px
-            line-height: 1.2
-            text-decoration: none
-            &:hover
-                color: $active-color
+        text-decoration: none
+        &:hover
+            color: $active-color
+
 
 .gallery
-    display: flex
-    flex-wrap: wrap
+    &__wrap
+        display: flex
+        flex-wrap: wrap
     &__box
         height: 49px
         width: 49px
@@ -223,7 +291,7 @@ h1
 .switch
     display: inline-block
     position: relative
-    left: 26%
+    left: 17%
     margin-bottom: 30px
     a
         background-color: $second-color

@@ -1,0 +1,51 @@
+
+#sidebar
+  position: fixed
+  width: 200px
+  height: 100%
+  background: $second-color
+  right: -200px
+  -webkit-transition: all 500ms linear
+  transition: all 500ms linear
+  z-index: 2
+  text-align: center
+  +rmin(670)
+    display: none
+
+
+#sidebar.active
+  right: 0px
+  // overflow: auto
+
+
+#sidebar ul
+  list-style: none
+
+#sidebar li a
+  color: #fff
+  list-style: none
+  text-decoration: none
+  padding: 15px 10px
+  display: inline-block
+  font-weight: bold
+  text-transform: uppercase
+
+#sidebar li a.is-active,
+#sidebar ul li a:hover
+  color: $active-color
+
+
+#sidebar .toggle-btn
+  position: absolute
+  right: 230px
+  top: 25px
+  cursor: pointer
+  +rmin(670)
+    display: none
+
+#sidebar .toggle-btn span
+  display: block
+  width: 30px
+  height: 5px
+  background: $active-color
+  margin: 5px 0px
