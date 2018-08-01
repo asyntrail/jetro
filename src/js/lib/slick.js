@@ -1,4 +1,7 @@
 /*eslint-env jquery*/
+
+import 'slick-carousel';
+
 function initSlider() {
   $('.slider').slick({
     arrows: true,

@@ -1,13 +1,11 @@
-import 'jquery';
-import toggleSidebar from './lib/collapse.js';
+/*eslint-env jquery*/
 
-document.getElementById('toggle-btn').addEventListener('click',toggleSidebar);
+$('.toggle-btn').click(function() {
+  $('.sidebar-menu').toggleClass('active');
+});
 
-
-import 'slick-carousel';
 import initSlider from './lib/slick.js';
 initSlider();
-
 
 import 'lightbox2';
 
