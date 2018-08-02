@@ -12,6 +12,7 @@
     padding: 22px 0px 16px 0px
 
 .logo
+    position: relative
     &__link
         text-decoration: none
         font-size: 0px
@@ -20,9 +21,21 @@
     &__part1
         color: $active-color
         font-size: 36px
+        display: inline-block
+        position: relative
+        z-index: 2
     &__part2
         color: $second-color
         font-size: 36px
+        display: inline-block
+    &__part3
+        background: #fff
+        display: inline-block
+        height: 42px
+        width: 51px
+        position: absolute
+        right: 53px
+        z-index: 1
 
 .header__nav
     margin-left: auto
@@ -234,6 +247,8 @@
 
 .list__nav
     margin-bottom: 30px
+    li
+        position: relative
     a
         color: #000
         font-size: 12px
@@ -241,6 +256,8 @@
         text-decoration: none
         &:hover
             color: $active-color
+    span
+        display: inline-block
 
 .gallery
     &__wrap
@@ -289,7 +306,7 @@
     display: inline-block
     position: relative
     left: 17%
-    margin-bottom: 30px
+    margin: 50px 0px 30px 0px
     a
         background-color: $second-color
         width: 26px

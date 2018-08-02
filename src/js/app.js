@@ -9,3 +9,8 @@ initSlider();
 
 import 'lightbox2';
 
+
+import animation from './lib/gsap.js';
+
+animation();
+
